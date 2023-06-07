@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Button = (props) => {
     return(
         <Container 
-            className={[props.outlined && 'outlined', props.pilled && 'pilled']}
+            className={props.classes}
             onClick={props.click}>
             {props.title}
         </Container>
@@ -29,6 +29,14 @@ const Container = styled.button`
     }
     &.pilled{
         border-radius: 25px;
+    }
+    &.circle{
+        width: 40px;
+        height: 40px;
+        padding: 0;
+    }
+    &.w100{
+        width: 100%;
     }
     &:hover{
         background-color: #641da7;
